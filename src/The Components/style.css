@@ -1,0 +1,67 @@
+/* # */
+
+
+
+
+#blink{
+    --cursor-color:white;
+    white-space: wrap;
+
+    border-right:1px solid var(--cursor-color);
+     animation:blinking 1s steps(1,end) infinite,
+              typing 5s steps(53,end);
+    overflow: hidden;
+    white-space:nowrap;
+}
+@keyframes blinking {
+    0% {border-color:transparent}
+    50%{border-color: var(--cursor-color);}
+
+    
+    
+    
+    100%{border-color: transparent;}
+    
+}
+@keyframes typing {
+    0% {width: 0}
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    100%{width:100%;white-space: wrap;}
+    
+}
+
+
+#resume{
+    transition: all 1s;
+    transform: translateX(all);
+    filter: blur();
+
+}
