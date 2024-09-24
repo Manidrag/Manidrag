@@ -25,11 +25,11 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v2
-        with:
-          name: production-files
-          path: ./dist
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Vite Github Pages Deployer
+        uses: skywarth/vite-github-pages-deployer@master
+        id: deploy_to_pages
 
   deploy:
     name: Deploy
