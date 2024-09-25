@@ -11,19 +11,19 @@ import { Home } from './The Components/Home.jsx'
 import { Navbar } from './The Components/NAvnar.jsx'
 import { Projects } from './The Components/Projects.jsx'
 const route=createBrowserRouter([{
-  path:'/',
+  path:'./',
   element:<Navbar/>,
   children:[{
-    path:'/',
+    path:'./',
     element:<Home/>
   },{
-    path:'/about',
+    path:'./about',
     element:<About/>
   },{
-    path:'/iprojects/:id',
+    path:'./iprojects/:id',
     element:<Projects/>
   },{
-    path:'/Skillandprojects',
+    path:'./Skillandprojects',
     element:<Skillandprojects/>
   }]
 }
