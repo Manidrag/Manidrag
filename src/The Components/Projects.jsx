@@ -103,7 +103,7 @@ export function Projects() {
             as done!{" "}
           </p>{" "}
           <br></br>
-          <p className="flex-col h-auto">Skills: HTML,Tailwind,REACT.js</p>
+          <p className=" h-auto flex-wrap">Skills: HTML,CSS,REACT.js</p>
         </li>
         <li
           id="trans"
@@ -118,7 +118,7 @@ export function Projects() {
             details based on the user search
           </p>
           <br></br>
-          <p>Skill used:REACT,Tailwind or CSS,HTML</p>
+          <p className="flex">Skill used:REACT,Tailwind or CSS,HTML</p>
         </li>
         <li
           id="trans"
@@ -133,7 +133,7 @@ export function Projects() {
             Total price
           </p>
           <br></br>
-          <p>Skill Used:REDUX,REACT</p>
+          <p className="flex-wrap">Skill Used:REDUX,REACT</p>
         </li>
       </ul>
     </>
