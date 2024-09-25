@@ -10,7 +10,7 @@ import { Skillandprojects } from './The Components/SkillAndProjecthere.jsx'
 import { Home } from './The Components/Home.jsx'
 import { Navbar } from './The Components/NAvnar.jsx'
 import { Projects } from './The Components/Projects.jsx'
-const route=createBrowserRouter([{
+const route=createHashRouter([{
   path:'/',
   element:<Navbar/>,
   children:[{
