@@ -9,6 +9,7 @@ import {
 import "./Transition.css";
 export function Projects() {
   const data = useParams();
+  //hh
   console.log(data);
 //hh
   return (
@@ -92,7 +93,7 @@ export function Projects() {
       <ul className="m-20 text-white text-xl font-theHck ">
         <li
           id="trans"
-          className=" font-bold rounded-xl items-center md:flex hover:text-1xl h-44 bg-blue-300 shadow-xl hover:shadow-2xl hover:shadow-black shadow-black m-10 p-2"
+          className=" font-bold rounded-xl items-center md:flex hover:text-1xl h-auto md:h-44 bg-blue-300 shadow-xl hover:shadow-2xl hover:shadow-black shadow-black m-10 p-2"
         >
           <NavLink className="font-extrabold flex-none underline text-2xl text-black">
             To-Do List
@@ -106,7 +107,7 @@ export function Projects() {
         </li>
         <li
           id="trans"
-          className="  font-bold rounded-xl items-center  md:flex hover:text-1xl h-44 bg-blue-300 shadow-lg hover:shadow-2xl hover:shadow-black shadow-black m-10 p-2 "
+          className="  font-bold rounded-xl items-center  md:flex hover:text-1xl h-auto md:h-44 bg-blue-300 shadow-lg hover:shadow-2xl hover:shadow-black shadow-black m-10 p-2 "
         >
           <NavLink className="font-extrabold flex-none underline text-2xl text-black">
             Food-Recipe{" "}
@@ -121,7 +122,7 @@ export function Projects() {
         </li>
         <li
           id="trans"
-          className=" font-bold rounded-xl items-center md:flex hover:text-1xl h-44 bg-blue-300 shadow-lg hover:shadow-2xl hover:shadow-black shadow-black m-10 p-2 "
+          className=" font-bold rounded-xl items-center md:flex hover:text-1xl md:h-44 h-auto  bg-blue-300 shadow-lg hover:shadow-2xl hover:shadow-black shadow-black m-10 p-2 "
         >
           <NavLink className="font-extrabold flex-none underline text-2xl text-black">
             Shopping Cart
