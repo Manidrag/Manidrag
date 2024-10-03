@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 import {
   NavLink,
   UNSAFE_useRouteId,
@@ -7,11 +8,22 @@ import {
   useResolvedPath,
 } from "react-router-dom";
 import "./Transition.css";
+import { Ytodo } from "./Projects/To-do-list";
+import { FoodRecipe } from "./Projects/TheFoodRES";
 export function Projects() {
   const data = useParams();
   //hh
   console.log(data);
-//hh
+  function myFuctions(x) {
+    let z = document.getElementById("" + x + "");
+    console.log(z.style);
+    if (z.style.display === "") {
+      z.style.display = "none";
+    } else {
+      z.style.display = "";
+    }
+  }
+  //hh
   return (
     <>
       {data.id == "React" ? (
@@ -90,50 +102,53 @@ export function Projects() {
         </>
       ) : null}
 
-      <ul className="m-20 text-white text-xl font-theHck ">
+      <ul className=" text-white text-xl font-theHck ">
         <li
           id="trans"
-          className=" font-bold rounded-xl items-center md:flex hover:text-1xl h-auto md:h-44 bg-blue-300 shadow-xl hover:shadow-2xl hover:shadow-black shadow-black m-10 p-2"
+          className=" font-bold rounded-xl items-center md:flex-col hover:text-1xl h-auto justify-center bg-red-200  hover:shadow-2xl hover:shadow-black shadow-black m-10 p-2"
         >
-          <NavLink className="font-extrabold flex-none underline text-2xl text-black">
+          <NavLink
+            className="font-extrabold flex-none inline text-2xl text-black"
+            onClick={() => myFuctions("tic")}
+          >
             To-Do List
-          </NavLink>
-          <p className="text-red-500">
-            It a simple web app in which you add the items when its done mark it
-            as done!{" "}
-          </p>{" "}
-          <br></br>
-          <p className=" h-auto flex-wrap">Skills: HTML,CSS,REACT.js</p>
-        </li>
+          </NavLink> </li>
+        <div id="tic" style={{ display: "none" }}><Ytodo/></div>
+       
+       
         <li
           id="trans"
-          className="  font-bold rounded-xl items-center  md:flex hover:text-1xl h-auto md:h-44 bg-blue-300 shadow-lg hover:shadow-2xl hover:shadow-black shadow-black m-10 p-2 "
+          className="  font-bold rounded-xl items-center  hover:text-1xl h-auto w-auto hover:shadow-lg bg-red-100  hover:shadow-black shadow-black m-10 p-2 "
         >
-          <NavLink className="font-extrabold flex-none underline text-2xl text-black">
+          <NavLink
+            className="font-extrabold flex-none underline text-2xl text-black"
+            onClick={() => myFuctions("Res")}
+          >
             Food-Recipe{" "}
           </NavLink>
           <br></br>{" "}
-          <p className="text-red-500">
-            In This projext we made a website which use Api to fetch recipe
-            details based on the user search
-          </p>
-          <br></br>
-          <p className="flex">Skill used:REACT,Tailwind or CSS,HTML</p>
+          <div className="text-red-500" id="Res" style={{ display: "none" }}><FoodRecipe/>hhhh</div>
+          
         </li>
         <li
           id="trans"
-          className=" font-bold rounded-xl items-center md:flex hover:text-1xl md:h-44 h-auto  bg-blue-300 shadow-lg hover:shadow-2xl hover:shadow-black shadow-black m-10 p-2 "
+          className=" font-bold rounded-xl items-center md:flex hover:text-1xl md:h-44 h-auto justify-center  bg-red-300 hover:shadow-2xl hover:shadow-black shadow-black  p-2 "
         >
-          <NavLink className="font-extrabold flex-none underline text-2xl text-black">
+          <NavLink
+            className="font-extrabold flex-none underline text-2xl text-black"
+            onClick={() => myFuctions("RESTINGCART")}
+          >
             Shopping Cart
           </NavLink>
-          <p className="text-red-500">
+          <p
+            className="text-red-500"
+            id="RESTINGCART"
+            style={{ display: "none" }}
+          >
             In this project i used APi to fetch data of product and use REDUX to
             maintail the data library of ADD to CART funtionality TO calculate
             Total price
           </p>
-          <br></br>
-          <p className="flex-wrap">Skill Used:REDUX,REACT</p>
         </li>
       </ul>
     </>

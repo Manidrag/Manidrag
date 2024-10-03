@@ -17,6 +17,7 @@
     0% {border-color:transparent}
     50%{border-color: var(--cursor-color);}
 
+
     
     
     
@@ -59,9 +60,90 @@
 }
 
 
-#resume{
-    transition: all 1s;
-    transform: translateX(all);
-    filter: blur();
+/* .List{
+    transform-style: preserve-3d;
+    transform:perspective(1000px);
+    position:absolute;
+    right:(50%-224px)
 
+}
+
+
+    
+
+
+/* .List .itegh {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(calc(var(--position)-1)*(360/var(--quantity))*1deg),
+  translate(550px);
+} */
+ .hey{
+    position:relative;
+    height:50vh;
+    margin:10px;
+
+ }
+.hey .List{
+    position: absolute;
+   width: 200px;
+   height:220px;
+   left: calc(50% - 200px);
+   transform-style: preserve-3d;
+   transform: perspective(1000px);
+   animation: autoRun 20s linear infinite;
+
+
+}
+@keyframes autoRun {
+    from{
+        transform:rotateY(0deg);}
+    to{
+        transform: rotateY(360deg);
+    }
+}
+ 
+.hey .List .itegh1{
+    position:absolute;
+   inset:0 0 0 0;
+   transform: rotateY(0deg)
+              translateZ(520px)
+
+           
+   
+}.hey .List .itegh2{
+    position:absolute;
+   inset:0 0 0 0;
+   transform: rotateY(60deg)
+              translateZ(520px)
+
+           
+   
+}.hey .List .itegh3{
+    position:absolute;
+   inset:0 0 0 0;
+   transform: rotateY(144deg)
+              translateZ(520px)
+
+           
+   
+}
+.hey .List .itegh4{
+    position:absolute;
+   inset:0 0 0 0;
+   transform: rotateY(217deg)
+             translateZ(520px)
+}          
+   .hey .List .itegh5{
+    position:absolute;
+   inset:0 0 0 0;
+   transform: rotateY(299deg)
+              translateZ(520px)
+       }
+
+.hey .List .itegh .img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    
 }
