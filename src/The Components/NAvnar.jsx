@@ -5,7 +5,7 @@ import React, { useState } from "react";
 export function Navbar(){  let [bgclr,setbgclr]=useState("#DFE0DC")
     document.body.style.backgroundColor=bgclr;
   return<> 
-<header className="flex justify-between flex-col md:flex-row gap-5 font-theHck">
+<header  className="flex justify-between flex-col md:flex-row gap-5 font-theHck" style={{transition:"all 1s"}}>
 <div><NavLink to={'/'} onClick={()=>setbgclr("cream")} className="text-5xl text-red-400 shadow-2xl  m-0 p-0 rounded-xl hover:shadow-black "> YOUR PORTFOLIO </NavLink></div>
 <div className=""><NavLink to={'/'} className=" shadow-2xl bg-white shadow-gray-50 text-red-900 m-5 hover:text-blue-500 p-2 pt-3 pb-3 hover:shadow-black hower:shadow-2xl rounded-xl font-bold   hover:bg-white">Home</NavLink>
 <NavLink to={'/iprojects/:'} className="p-11  pt-1   shadow-2xl bg-white shadow-gray-50 text-red-900 m-5 hover:text-blue-500 pb-1 hover:shadow-black hover:shadow-xl rounded-xl font-bold    hover:bg-white">Projects</NavLink>
